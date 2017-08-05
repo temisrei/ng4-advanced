@@ -1,3 +1,4 @@
+import {ActivatedRoute, Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { initDashboard } from './ini-dashboard';
 
@@ -8,11 +9,14 @@ import { initDashboard } from './ini-dashboard';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     $(initDashboard);
 
   }
 
+  goCards(type: number) {
+    this.router.navigateByUrl(`cards/${type}`);
+  }
 }
