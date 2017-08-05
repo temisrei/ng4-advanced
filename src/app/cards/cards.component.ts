@@ -9,6 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class CardsComponent implements OnInit {
   type: number = 0;
   action1: string = '';
+  action2: string = '';
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
@@ -22,6 +23,10 @@ export class CardsComponent implements OnInit {
       this.type = params['type'];
       //增加 可選的路由矩陣參數
       this.action1 = params['action'];
+    })
+
+    this.route.queryParams.subscribe(params => {
+      this.action2 = params['action'];
     })
 
   }

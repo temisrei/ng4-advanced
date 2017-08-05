@@ -16,7 +16,7 @@
                   </ul>
                 </div>
                 <!-- END dropdown-->
-                <div class="card-title">::: {{ type }} ::: {{ action1 }}</div>
+                <div class="card-title">::: {{ type }} ::: {{ action1 }} ::: {{ action2 }}</div>
               </div>
               <div class="card-body">
                 <p>Nulla egestas faucibus tincidunt.</p>
@@ -28,8 +28,12 @@
                 <button
                   [routerLink]="['/cards/200', {action: '+1'}]"
                   type="button"
-                  class="btn btn-flat btn-default">Action +1 Matrix</button>
-                <button type="button" class="btn btn-flat btn-default">Action 2</button>
+                  class="btn btn-flat btn-default">Action +1 MatrixURI</button>
+                <button
+                  [routerLink]="['/cards/201']"
+                  [queryParams]="{action: '-1'}"
+                  type="button"
+                  class="btn btn-flat btn-default">Action -1 QueryString</button>
               </div>
             </div>
           </div>
