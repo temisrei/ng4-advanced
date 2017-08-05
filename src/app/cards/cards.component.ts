@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CardsComponent implements OnInit {
   type: number = 0;
+  action1: string = '';
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
@@ -19,6 +20,8 @@ export class CardsComponent implements OnInit {
     //由於是 Observable 所以要用 subscribe 訂閱
     this.route.params.subscribe(params => {
       this.type = params['type'];
+      //增加 可選的路由矩陣參數
+      this.action1 = params['action'];
     })
 
   }
