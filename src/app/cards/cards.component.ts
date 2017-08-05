@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
+  type: number = 0;
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    //僅初始值
+    // this.type = this.route.snapshot.params['type'];
+
+    //透過 params 這個 Observable 物件來取得參數值
+    //由於是 Observable 所以要用 subscribe 訂閱
+    this.route.params.subscribe(params => {
+      this.type = params['type'];
+    })
+
   }
 
 }
