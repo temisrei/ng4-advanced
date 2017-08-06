@@ -41,6 +41,9 @@
                   [(ngModel)]="data.subtitle"
                   name="subtitle"
                   required
+                  minlength="3"
+                  maxlength="100"
+                  pattern="\d+"
                   #mSubtitle="ngModel"
                   type="text"
                   class="form-control">
