@@ -41,8 +41,8 @@ export class CardsComponent implements OnInit {
     console.log(this.block.title);
   }
 
-  addCounter() {
-    this.counter++;
-  }
+  // addCounter() {
+  //   this.counter++;
+  // }
 
 }
