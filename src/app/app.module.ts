@@ -13,7 +13,8 @@ import { LoginGuard } from './login.guard';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClassicComponent } from './forms/classic/classic.component';
-import { Classic2Component } from './forms/classic2/classic2.component'
+import { Classic2Component } from './forms/classic2/classic2.component';
+import { BlockComponent } from './block/block.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Classic2Component } from './forms/classic2/classic2.component'
     LoginComponent,
     LayoutComponent,
     ClassicComponent,
-    Classic2Component
+    Classic2Component,
+    BlockComponent
   ],
   imports: [
     BrowserModule,

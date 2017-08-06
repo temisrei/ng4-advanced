@@ -20,9 +20,11 @@ const routes: Routes = [
       { path: 'forms/classic', component: ClassicComponent },
       { path: 'forms/classic2', component: Classic2Component },
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'cards', component: CardsComponent },
       { path: 'cards/:type',
         component: CardsComponent,
-        canActivate: [LoginGuard] },
+        canActivate: [LoginGuard]
+      },
       { path: 'charts',
         loadChildren: './charts/charts.module#ChartsModule' }
   ]},
