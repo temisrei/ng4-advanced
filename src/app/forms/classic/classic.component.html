@@ -79,7 +79,23 @@
               </div>
             </div>
           </fieldset>
+          <fieldset *ngFor="let i of addresses">
+            <div class="form-group">
+              <label for="input-id-1" class="col-sm-2 control-label">
+               地址 {{ i + 1 }}
+              </label>
+              <div class="col-sm-10">
+                <input
+                  [(ngModel)]="this.data.address[i]"
+                  [name]="'address' + i"
+                  id="input-id-1"
+                  type="text"
+                  class="form-control">
+              </div>
+            </div>
+          </fieldset>
           <input type="submit" value="送出">
+          <input type="button" value="新增地址" (click)="addAddress()">
           <fieldset>
             <div class="form-group">
               <label for="input-id-1" class="col-sm-2 control-label">Label focus</label>
