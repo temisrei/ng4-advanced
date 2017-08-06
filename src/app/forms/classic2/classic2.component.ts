@@ -19,7 +19,9 @@ export class Classic2Component implements OnInit {
           Validators.minLength(3)
         ]
       ],
-      subtitle: this.fb.control('World')
+      subtitle: ['World', [
+        Validators.required
+      ]]
     })
   }
 
