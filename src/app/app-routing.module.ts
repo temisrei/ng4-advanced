@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginGuard } from './login.guard';
 import { ClassicComponent } from './forms/classic/classic.component';
+import { Classic2Component } from './forms/classic2/classic2.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'forms/classic', component: ClassicComponent },
+      { path: 'forms/classic2', component: Classic2Component },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'cards/:type',
         component: CardsComponent,
