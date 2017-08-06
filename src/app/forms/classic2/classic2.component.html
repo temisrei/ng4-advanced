@@ -69,7 +69,9 @@
           <fieldset
             *ngFor="let ctrl of form.get('addresses').controls; let i = index"
             formArrayName="addresses">
-            <div class="form-group">
+            <div
+              [class.has-error]="form.get('addresses.'+i).touched && form.get('addresses.'+i).invalid"
+              class="form-group">
               <label for="input-id-1" class="col-sm-2 control-label">
                地址 {{ i + 1 }}
               </label>
@@ -78,6 +80,9 @@
                   [formControlName]="i"
                   id="input-id-1" type="text"
                   class="form-control">
+                <span class="help-block">
+                  <pre>errors = {{ form.get('addresses.'+i).errors | json }}</pre>
+                </span>
               </div>
             </div>
           </fieldset>
