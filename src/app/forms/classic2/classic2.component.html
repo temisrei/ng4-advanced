@@ -66,10 +66,28 @@
               </div>
             </div>
           </fieldset>
+          <fieldset
+            *ngFor="let ctrl of form.get('addresses').controls; let i = index"
+            formArrayName="addresses">
+            <div class="form-group">
+              <label for="input-id-1" class="col-sm-2 control-label">
+               地址 {{ i + 1 }}
+              </label>
+              <div class="col-sm-10">
+                <input
+                  [formControlName]="i"
+                  id="input-id-1" type="text"
+                  class="form-control">
+              </div>
+            </div>
+          </fieldset>
         <input
           class="btn btn-raised btn-primary ripple"
           type="submit"
           value="Submit">
+        <input
+          class="btn btn-raised btn-success ripple"
+          type="button" value="新增地址" (click)="addAddress()">
         <fieldset>
           <div class="form-group">
             <label for="input-id-1" class="col-sm-2 control-label">Label focus</label>

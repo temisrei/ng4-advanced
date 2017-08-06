@@ -22,7 +22,11 @@ export class Classic2Component implements OnInit {
           Validators.required,
           Validators.pattern('\\d+')
         ]]
-      })
+      }),
+      addresses: this.fb.array([
+        this.fb.control('Taipei'),
+        this.fb.control('Kaohsiung')
+      ])
     })
   }
 
