@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators, FormArray } from "@angular/forms";
 
 @Component({
   selector: 'app-classic2',
@@ -32,6 +32,14 @@ export class Classic2Component implements OnInit {
 
   doSubmit() {
     console.log(this.form);
+  }
+
+  addAddress() {
+    // this.form.get('addresses').controls 要做轉型
+    let addresses = (this.form.get('addresses') as FormArray);
+    addresses.push(this.fb.control('New address', [
+      Validators.required
+    ]));
   }
 
 }
