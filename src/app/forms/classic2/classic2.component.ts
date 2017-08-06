@@ -13,16 +13,16 @@ export class Classic2Component implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      title: ['Hello',
-        [
+      title: ['Hello', [
           Validators.required,
           Validators.minLength(3)
-        ]
-      ],
-      subtitle: ['World', [
-        Validators.required,
-        Validators.pattern('\\d+')
-      ]]
+        ]],
+      group1: this.fb.group({
+        subtitle: ['World', [
+          Validators.required,
+          Validators.pattern('\\d+')
+        ]]
+      })
     })
   }
 
