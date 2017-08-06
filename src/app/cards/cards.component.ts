@@ -11,6 +11,8 @@ export class CardsComponent implements OnInit {
   action1: string = '';
   action2: string = '';
 
+  counter = 25;
+
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -29,6 +31,10 @@ export class CardsComponent implements OnInit {
       this.action2 = params['action'];
     })
 
+  }
+
+  addCounter() {
+    this.counter++;
   }
 
 }

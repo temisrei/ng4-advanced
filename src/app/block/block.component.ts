@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-block',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlockComponent implements OnInit {
 
+  @ViewChild('title') title: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    console.log(this.title.nativeElement.innerHTML);
   }
 
 }

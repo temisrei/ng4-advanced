@@ -61,7 +61,12 @@
         <div class="row">
           <div class="col-sm-6 col-xs-12">
             <app-block>
-              <button type="button" class="btn-raised btn btn-primary btn-circle btn-lg">25</button>
+              <button
+                (click)="addCounter()"
+                type="button"
+                class="btn-raised btn btn-primary btn-circle btn-lg">
+                {{ counter }}
+              </button>
             </app-block>
           </div>
           <div class="col-sm-6 col-xs-12">
