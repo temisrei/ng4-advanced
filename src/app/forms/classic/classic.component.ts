@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from "@angular/forms/forms";
+
 
 @Component({
   selector: 'app-classic',
@@ -6,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./classic.component.css']
 })
 export class ClassicComponent implements OnInit {
-  data: any = {};
+  data: any = {
+    'title': 'Hello',
+    'subtitle': 'World'
+  };
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setDisabled(ctl: NgModel) {
+    // console.log(ctl);
+    ctl.control.disable();
   }
 
 }
