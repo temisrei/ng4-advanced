@@ -20,7 +20,8 @@ export class Classic2Component implements OnInit {
         ]
       ],
       subtitle: ['World', [
-        Validators.required
+        Validators.required,
+        Validators.pattern('\\d+')
       ]]
     })
   }
