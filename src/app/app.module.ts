@@ -11,7 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginGuard } from './login.guard';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClassicComponent } from './forms/classic/classic.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     DashboardComponent,
     CardsComponent,
     LoginComponent,
-    LayoutComponent
+    LayoutComponent,
+    ClassicComponent
   ],
   imports: [
     BrowserModule,
