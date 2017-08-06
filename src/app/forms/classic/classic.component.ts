@@ -11,10 +11,13 @@ export class ClassicComponent implements OnInit {
   data: any = {
     'title': 'Hello',
     'subtitle': 'World',
-    'address': []
+    'address': ['Taipei','Kaohsiung','Taichung']
   };
 
-  addresses = [0,1,2];
+  // 專門給 ngFor 用的陣列屬性
+  get data_address_len() {
+    return new Array(this.data.address.length);
+  }
 
   constructor() { }
 
@@ -27,13 +30,13 @@ export class ClassicComponent implements OnInit {
   }
 
   doSubmit(event, f) {
-    console.log(event);
-    console.log(f);
+    // console.log(event);
+    // console.log(f);
   }
 
   addAddress() {
-    let len = this.addresses.length;
-    this.addresses.push(len);
+    let len = this.data.address.length;
+    this.data.address.push(len);
   }
 
 }
