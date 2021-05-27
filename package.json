@@ -21,12 +21,12 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "core-js": "^3.10.1",
+    "core-js": "^3.13.0",
     "rxjs": "^5.5.12",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
-    "@angular/cli": "^11.2.8",
+    "@angular/cli": "^12.0.2",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^11.2.10",
     "@types/jasmine": "~3.6.9",
@@ -40,7 +40,7 @@
     "karma-cli": "~2.0.0",
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "~4.0.1",
-    "karma-jasmine-html-reporter": "^1.5.4",
+    "karma-jasmine-html-reporter": "^1.6.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.5.4",
     "tslint": "~6.1.3",
